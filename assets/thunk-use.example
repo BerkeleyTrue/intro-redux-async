@@ -1,0 +1,17 @@
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+
+import rootReducer from './reducers';
+import { fetchUserInfo } from './actions';
+
+// creates a store enhancer
+const enhanceStoreWithMiddlewares = applyMiddleware(
+  thunkMiddleware
+);
+
+const store = createStore(
+  rootReducer,
+  enhanceStoreWithMiddlewares
+);
+
+store.dispatch(fetchUserInfo());

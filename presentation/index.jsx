@@ -212,11 +212,17 @@ export default class Presentation extends React.Component {
           />
           <Slide>
             <Heading>
-              Let's provide our own dispatch!
+              We can make it better.
+            </Heading>
+            <Heading
+              size={ 3 }
+              textColor='secondary'
+              >
+              We have the power
             </Heading>
             <List>
               <ListItem>
-                Change dispatch to except action objects and functions
+                Change dispatch to accept action objects and functions
               </ListItem>
               <ListItem>
                 When a function call that function with the old dispatch
@@ -267,6 +273,53 @@ export default class Presentation extends React.Component {
               createStore function
             </Text>
           </Slide>
+          <Slide>
+            <Heading>
+              store enhancer
+            </Heading>
+            <Text
+              textColor='secondary'
+              >
+              creates a new store that wraps the old store
+            </Text>
+            <Text
+              textColor='secondary'
+              >
+              change how the dispatch function works
+            </Text>
+          </Slide>
+          <Slide>
+            <Heading>
+              applyMiddleware
+            </Heading>
+            <List>
+              <ListItem>
+                turns a list of middlewares
+              </ListItem>
+              <List>
+                <ListItem>
+                  Which are also just POJF's
+                </ListItem>
+              </List>
+              <ListItem>
+                into one store enhancer
+              </ListItem>
+            </List>
+          </Slide>
+          <CodeSlide
+            code={ require('raw!../assets/thunk-use.example') }
+            lang='jsx'
+            ranges={[
+              { loc: [ 0, 255 ], title: 'Use Thunk middleware' },
+              { loc: [ 0, 1] },
+              { loc: [ 1, 2 ] },
+              { loc: [ 6, 10 ] },
+              { loc: [ 11, 15 ] },
+              { loc: [ 16, 17 ] }
+
+            ]}
+            transition={ [] }
+          />
           <Slide>
             <Heading
               textColor='secondary'
