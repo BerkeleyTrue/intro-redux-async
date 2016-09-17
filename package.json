@@ -1,11 +1,11 @@
 {
-  "name": "berkeley-spectacle-boilerplate",
+  "name": "intro-redux-async",
   "version": "0.0.1",
-  "description": "Berkeleys magical Spectacle.js boilerplate",
+  "description": "An Intro to Async with Redux-Thunk",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BerkeleyTrue/berkeleys-spectacle-boilerplate.git"
+    "url": "https://github.com/BerkeleyTrue/intro-redux-async.git"
   },
   "scripts": {
     "clean": "rimraf dist",
